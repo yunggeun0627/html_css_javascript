@@ -1,0 +1,79 @@
+html {
+    font-size: 62.5%;
+    background-color: #fafafa;
+}
+
+div > h1 + p {
+    color: red;
+}
+
+.buttons {
+
+    & > div {
+        box-sizing: border-box;
+        border: 0.1rem solid #dbdbdb;
+        border-radius: 0.4rem;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+        width: fit-content;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        &:active {
+            background-color: #eee;
+        }
+    }
+
+    & > a {
+        box-sizing: border-box;
+        border: 0.1rem solid #dbdbdb;
+        border-radius: 0.4rem;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+        width: fit-content;
+        cursor: pointer;
+        color: #222;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        &:active {
+            background-color: #eee;
+        }
+    }
+
+    & > button {
+        box-sizing: border-box;
+        border: 0.1rem solid #dbdbdb;
+        border-radius: 0.4rem;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+        width: fit-content;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        &:active {
+            background-color: #eee;
+        }
+
+        &:disabled {
+            background-color: red;
+            cursor: default;
+        }
+    }
+}
+
+#button2:target {
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+}
+

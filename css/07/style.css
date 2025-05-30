@@ -77,3 +77,59 @@ div > h1 + p {
     background-color: red;
 }
 
+.check > input[type=checkbox] + label {
+    color: blue;
+} 
+
+.check > input[type=checkbox]:checked + label {
+    color: red;
+}
+
+.check > input[type=radio] + label {
+    color: blue;
+}
+
+.check > input[type=radio]:checked + label {
+    color: red;
+}
+
+.not > input:not(#text2) {
+    background-color: green;
+}
+
+.menu-list {
+
+    & > li {
+        position: relative;
+        border: 0.1rem solid #dbdbdb;
+        width: fit-content;
+        cursor: pointer;
+
+        & > div {
+            display: none;
+        }
+
+        &:active > div {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -20rem;
+            background-color: yellow;
+            width: 20rem;
+        }
+    }
+}
+
+.menu-list2 li:nth-of-type(3n-1) {
+    color: brown;
+}
+
+.menu-list2 > li::before {
+    content: "menu ";
+    border: 0.1rem solid #dbdbdb;
+    color: pink;
+}
+
+.menu-list2 > li::after {
+    content: " ->";
+}

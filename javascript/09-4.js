@@ -22,7 +22,7 @@ async function main() {
     fx1(false)
     .then(result => r1 = result)
     .then(() => console.log(r1))
-    .catch(error => console.log(error));
+    .catch(error => console.error(error));
 
     try{
         let r2 = await fx1(false);

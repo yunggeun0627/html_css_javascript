@@ -5,7 +5,7 @@ const userList = [
     {id: 4, username: "ddd"},
 ]
 
-function getUserById(id) {
+function findUserById(id) {
     return userList.find(user => user.id === id);
 }
 
@@ -20,19 +20,19 @@ function getUserById(id) {
     });
 }
 
-// let user1 = await getUserById(1);
-// console.log("!!!!!", user1);
+let user1 = await getUserById(1);
+console.log("!!!!!", user1);
 
-// let user2 = await getUserById(1);
-// console.log("!!!!!", user2);
+let user2 = getUserById(1);
+console.log("!!!!!", user2);
 
 getUserById(1)
 .then(result => user1 = result)
-.catch(error => console.log(error));
+.catch(error => console.error(error));
 
 getUserById(5)
 .then(result => console.log(result))
-.catch(error => console.log(error));
+.catch(error => console.error(error));
 
 async function getUserById2(id) {
     const foundUser = findUserById(id);
@@ -42,8 +42,8 @@ async function getUserById2(id) {
 
 getUserById(2)
 .then(result => console.log(result))
-.catch(error => console.log(error));
+.catch(error => console.error(error));
 
 getUserById(6)
 .then(result => console.log(result))
-.catch(error => console.log(error));
+.catch(error => console.error(error));
